@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#allblogs {
+  
+    width: 80%;
+    float: right;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.example {
+
+
+    width: 100%;
+    border-radius: 50px;
+    height: 10vh;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 30%;
+    background: #f1f1f1;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+}
+
+
+form.example button {
+    float: left;
+    width: 5%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+#allblogs h1 {
+    margin-left: 50px;
+}
+
+
+.scroll {
+
+   
+    width: 90%;
+    margin: auto;
+    height: 70vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0);
+}
+
+
+.property {
+
+    color: black;
+    margin: 20px auto;
+    height: 10vh;
+    width: 95%;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.title {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.title span {
+    text-align: left;
+}
+
+.property span {
+    padding-left: 100px;
+}
+
+.description {
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+
+.objects {
+    background-color: rgba(95, 158, 160, 0.333);
+    overflow-y: scroll;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.property img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.icons {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: brown;
+    margin-left: 450px;
+
+}
+
+
+.icons p {
+    float: right;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 253, 248, 0.64);
+    ;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(254, 192, 6, 0.64);
+    ;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    #allblogs{
+      
+        width: 90%;
+    }
+
+
+    form.example input[type=text] {
+ 
+        width: 50%;
+    }
+
+    form.example button{
+        width: 20%;
+    }
+
+    #allblogs h1{
+        text-align: center;
+    }
+
+    .scroll{
+       
+        width: 95%;
+    }
+
+    .property{
+  
+        width: 300%;
+    }
+
+
+
+}

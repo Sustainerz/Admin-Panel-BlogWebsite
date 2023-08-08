@@ -1,0 +1,177 @@
+#update {
+  
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    overflow: hidden;
+    width: 80%;
+}
+
+#update .from {
+
+   
+    height: 80vh;
+    width: 50%;
+
+}
+.update-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; 
+    margin-top: 1%;
+    margin-bottom: 10%;
+    padding:10px;
+    margin-left: 1%;
+    background-color: rgba(95, 158, 160, 0.333);
+    width: 50rem;
+    height: 30rem;
+    border-radius: 10%;
+    position:relative;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0);
+    
+  }
+
+
+  
+.update-form-container .form-group {
+    margin-bottom: 10px;
+    gap:5px;
+    padding-bottom:10px; /* Reduce margin bottom to reduce spacing between form groups */
+  }
+  
+  .update-form-container  .label {
+    display: block;
+    font-weight: bold;
+    margin-top: 2%;
+    padding-bottom: 5px; 
+  }
+  
+  .update-form-container input[type='text'],
+  .update-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    border-color:white;
+    margin-bottom:5px;
+  }
+  
+  .update-form-container button {
+    background-color: #007bff;
+    color: #fff;
+    
+    margin: 10px auto;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .update-form-container .update-text-container {
+    width: 100%;
+    padding: 5px;
+    border-color:  black;
+    border-radius: 5px;
+    background-color: #fff;
+   
+    margin-bottom:5px;
+  }
+.fromContainer {
+ 
+  
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.blog-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    background-color: rgba(95, 158, 160, 0.333);
+    width: 50rem;
+    height: 37rem;
+    border-radius: 10%;
+    position:relative;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0);
+    padding: 20px;
+  }
+  
+  .blog-form-container .form-group {
+    margin-bottom: 10px; /* Reduce margin bottom to reduce spacing between form groups */
+  }
+  
+  .blog-form-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 2%;
+    padding-bottom: 2px; /* Reduce padding bottom for label */
+  }
+  
+  .blog-form-container input[type='text'],
+  .blog-form-container textarea {
+    width: 100%;
+    padding: 10px; /* Reduce padding to reduce spacing inside inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    border-color: black;
+  }
+  
+  .blog-form-container button {
+    background-color: #007bff;
+    color: #fff;
+    
+    margin: 10% 90%;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .blog-form-container .blog-text-container {
+    width: 100%;
+    padding: 10px;
+    border-color:  black;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 5px;
+  }
+  /* ... Existing media queries ... */
+  
+  
+  @media (max-width: 576px) {
+    .blog-form-container {
+      padding: 10px;
+      border: none;
+      border-radius: 0;
+    }
+  
+    .blog-form-container .form-group {
+      margin-bottom: 10px;
+    }
+  
+    .blog-form-container label {
+      font-size: 16px;
+    }
+  
+    .blog-form-container input[type='text'],
+    .blog-form-container textarea {
+      padding: 10px;
+    }
+  
+    .blog-form-container button {
+      padding: 8px 12px;
+    }
+  }  
+  

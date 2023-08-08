@@ -1,0 +1,119 @@
+#allreviews {
+
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.scroll1 {
+
+    background-color: rgba(95, 158, 160, 0.333);
+    overflow-y: scroll;
+    height: 70vh;
+    border-radius: 10px;
+    width: 95%;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0);
+
+}
+
+
+.property1 {
+
+    color: black;
+    margin: 20px auto;
+    height: 10vh;
+    width: 90%;
+    /* float: right; */
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    box-shadow: 0px 7px 20px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+
+
+
+}
+
+.property1 img {
+    width: 70px;
+    height: 70px;
+    margin-left: 50px;
+}
+
+.icons1 {
+
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.icons1 p {
+    float: right;
+    /* color: #fff; */
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 253, 248, 0.64);
+    ;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(254, 192, 6, 0.64);
+    ;
+}
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    #allreviews {
+
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+
+    .property1 {
+
+        width: 300%;
+    }
+
+    .property1 img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+}

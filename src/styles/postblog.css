@@ -1,0 +1,141 @@
+
+.blog-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left; 
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 47rem;
+  overflow-y: auto;
+  margin-left: 1%;
+  background-color: rgba(95, 158, 160, 0.333);
+  width: 75rem;
+  height: 37rem;
+  border-radius: 10%;
+  position:relative;
+  box-shadow: 0px 7px 20px rgb(0, 0, 0);
+  padding: 20px;
+}
+
+.blog-form-container .form-group {
+  margin-bottom: 10px;  
+}
+
+.blog-form-container label {
+  display: block;
+  font-weight: bold;
+  margin-top: 2%;
+  padding-bottom: 2px; 
+}
+
+.blog-form-container input[type='text'],
+.blog-form-container textarea {
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  border-color: black;
+}
+
+.blog-form-container button {
+  background-color: #007bff;
+  color: #fff;
+  margin-top: 10px;
+  margin: 10% 90%;
+  padding: 20px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.blog-form-container .blog-text-container {
+  width: 100%;
+  padding: 10px;
+  border-color:  black;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+@media (max-width: 576px) {
+  .blog-form-container {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+  }
+
+  .blog-form-container .form-group {
+    margin-bottom: 10px;
+  }
+
+  .blog-form-container label {
+    font-size: 16px;
+  }
+
+  .blog-form-container input[type='text'],
+  .blog-form-container textarea {
+    padding: 10px;
+  }
+
+  .blog-form-container button {
+    
+    padding: 12px 16px; 
+    margin: 10px 0; 
+  }
+}  
+
+@media (width: 360px) and (height: 740px) {
+  .blog-form-container {
+ 
+    width: 90%; 
+    height: auto; 
+  }
+
+  .blog-form-container .form-group {
+   
+  }
+
+  .blog-form-container label {
+
+  }
+
+  .blog-form-container input[type='text'],
+  .blog-form-container textarea {
+ 
+  }
+
+  .blog-form-container button {
+    
+    padding: 12px 16px;
+    margin: 10px 0;
+  }
+}
+
+@media (width: 375px) and (height: 667px) {
+  .blog-form-container {
+   
+    width: 90%;
+    height: auto; 
+  }
+
+  .blog-form-container .form-group {
+
+    margin:10%
+  }
+
+  .blog-form-container label {
+    margin:5%
+  }
+
+  .blog-form-container input[type='text'],
+  .blog-form-container textarea {
+   
+  }
+
+  .blog-form-container button {
+  
+    padding: 12px 16px;
+    margin: 10%;
+  }
+}
