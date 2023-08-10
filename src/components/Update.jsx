@@ -7,7 +7,6 @@ import { EditorState, convertToRaw } from 'draft-js';
 import Axios from 'axios';
 const Update = () => {
   const [primaryImage, setPrimaryImage] = useState(null);
-  const [secondaryImage, setSecondaryImage] = useState(null);
   const [titleText, setTitleText] = useState('');
   const { id } = useParams();
   const primaryImageInputRef = useRef(null);
@@ -56,8 +55,6 @@ const Update = () => {
     event.preventDefault();
     const contentState = editorState.getCurrentContent();
     const contentRaw = convertToRaw(contentState);
-    console.log("hello");
-    alert("dsad");
     console.log(contentRaw);
     const formData = new FormData();
     formData.append("p_img", primaryImage);

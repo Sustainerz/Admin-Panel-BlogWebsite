@@ -67,8 +67,7 @@ const BlogForm = () => {
     event.preventDefault();
     const contentState = editorState.getCurrentContent();
     const contentRaw = convertToRaw(contentState);
-    console.log("hello");
-    alert("dsad");
+    
     console.log(contentRaw);
     const formData = new FormData();
     formData.append("p_img", primaryImage);

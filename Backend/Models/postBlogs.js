@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { ObjectId } = mongoose.Schema;
+
 
 const postSchema = new mongoose.Schema({
   title: {
@@ -24,13 +24,6 @@ const postSchema = new mongoose.Schema({
   },
 });
 
-
-const imageSchema = new mongoose.Schema({
-  data: Buffer, 
-  contentType: String, 
-});
-
 module.exports = {
-  Post: mongoose.model("Post", postSchema),
-  Image: mongoose.model("Image", imageSchema),
+  Post: mongoose.model("Post", postSchema)
 };

@@ -115,7 +115,7 @@ const AllBlogs = () => {
   ]
 
   const handleDelete = async(id) => {
-    alert(id);
+ 
     
     try {
       await Axios.delete(`http://localhost:3002/api/delete/${id}`

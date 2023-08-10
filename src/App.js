@@ -10,7 +10,6 @@ import Comments from './components/Comments';
 import Settings from './components/Settings';
 import BlogForm from './components/postblog';
 import { Route, Routes } from 'react-router-dom';
-//import NavBar from './components1/Home/Header/index';
 import Footer from './components1/Home/Footer/index';
 
 
@@ -26,9 +25,7 @@ function App() {
 
       <div className="container">
         <SideBar />
-        {/* <AllBlogs /> */}
 
-        {/* <BrowserRouter> */}
         <Routes>
         
           <Route path= '/blogpost' element={<BlogForm/>}></Route>
@@ -38,22 +35,11 @@ function App() {
           <Route path='/comment' element={<Comments />}></Route>
           <Route path='/settings' element={<Settings/>}></Route>
         </Routes>
-
-        {/* </BrowserRouter> */}
+        
       </div>
 
       <Footer/>
 
-
-
-
-      {/* <Update /> */}
-
-      {/* <Reviews/> */}
-
-      {/* <Settings/> */}
-      {/* 
-      <CreateBlog/> */}
 
 
     </div>
