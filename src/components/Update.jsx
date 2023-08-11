@@ -5,12 +5,14 @@ import { useParams } from 'react-router-dom';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { EditorState, convertToRaw } from 'draft-js';
 import Axios from 'axios';
+import { useBlogContext } from '../BlogProvider';
 const Update = () => {
   const [primaryImage, setPrimaryImage] = useState(null);
   const [titleText, setTitleText] = useState('');
-  const { id } = useParams();
+  const { selectedBlogId } = useBlogContext();
+  const { slug } = useParams();
   const primaryImageInputRef = useRef(null);
-
+  const id = selectedBlogId;
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [desc, setDesc] = useState('');
   const handleEditorChange = (state) => {

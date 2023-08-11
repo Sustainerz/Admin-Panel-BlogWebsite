@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import React from 'react';
 import Axios from 'axios';
 import '../styles/AllBlogs.css';
+import slugify from "slugify";
+import { useBlogContext } from "../BlogProvider";
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
@@ -128,6 +130,7 @@ const AllBlogs = () => {
 
   };
 
+  const { setSelectedBlogId } = useBlogContext();
 
   return (
     <section id='allblogs'>
@@ -175,7 +178,7 @@ const AllBlogs = () => {
                   <span >{data.address}</span>
                 </div>
                 
-                <p><AiFillDelete onClick={()=>{handleDelete(data._id)}}></AiFillDelete> &nbsp; <Link to={`/update/${data._id}`}><AiFillEdit style={{ color: 'black' }}/></Link> </p>
+                <p><AiFillDelete onClick={()=>{handleDelete(data._id)}}></AiFillDelete> &nbsp; <Link onClick={() => setSelectedBlogId(data._id)} to={`/update/${slugify(data.title)}`}><AiFillEdit style={{ color: 'black' }}/></Link> </p>
 
               </div>
             )

@@ -1,6 +1,4 @@
-
 import './App.css';
-
 import AllBlogs from './components/AllBlogs';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
@@ -11,7 +9,7 @@ import Settings from './components/Settings';
 import BlogForm from './components/postblog';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components1/Home/Footer/index';
-
+import { BlogProvider } from './BlogProvider';
 
 
 function App() {
@@ -25,17 +23,18 @@ function App() {
 
       <div className="container">
         <SideBar />
-
+        <BlogProvider>
         <Routes>
         
           <Route path= '/blogpost' element={<BlogForm/>}></Route>
           <Route path='/allblogs' element={<AllBlogs />}></Route>
-          <Route path='/update/:id' element={<Update />}></Route>
+          <Route path='/update/:slug' element={<Update />}></Route>
           <Route path='/reviews' element={<Reviews />}></Route>
           <Route path='/comment' element={<Comments />}></Route>
           <Route path='/settings' element={<Settings/>}></Route>
-        </Routes>
         
+        </Routes>
+        </BlogProvider>
       </div>
 
       <Footer/>
