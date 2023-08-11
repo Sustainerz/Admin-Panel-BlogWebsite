@@ -28,7 +28,7 @@ function App() {
         
           <Route path= '/blogpost' element={<BlogForm/>}></Route>
           <Route path='/allblogs' element={<AllBlogs />}></Route>
-          <Route path='/update/:slug' element={<Update />}></Route>
+          <Route path='/update/:slug/:id' element={<Update />}></Route>
           <Route path='/reviews' element={<Reviews />}></Route>
           <Route path='/comment' element={<Comments />}></Route>
           <Route path='/settings' element={<Settings/>}></Route>

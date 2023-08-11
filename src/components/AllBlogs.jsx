@@ -156,7 +156,7 @@ const AllBlogs = () => {
 
 
         <div className="objects">
-          {posts.map(function (data) {
+          {posts.map(function (data, index) {
             return (
               <div className="property" id={data._id}>
 
@@ -178,7 +178,7 @@ const AllBlogs = () => {
                   <span >{data.address}</span>
                 </div>
                 
-                <p><AiFillDelete onClick={()=>{handleDelete(data._id)}}></AiFillDelete> &nbsp; <Link onClick={() => setSelectedBlogId(data._id)} to={`/update/${slugify(data.title)}`}><AiFillEdit style={{ color: 'black' }}/></Link> </p>
+                <p><AiFillDelete onClick={()=>{handleDelete(data._id)}}></AiFillDelete> &nbsp; <Link onClick={() => setSelectedBlogId(data._id)} to={`/update/${slugify(data.title)}/${index + 1}`}><AiFillEdit style={{ color: 'black' }}/></Link> </p>
 
               </div>
             )
