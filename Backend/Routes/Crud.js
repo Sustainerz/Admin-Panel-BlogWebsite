@@ -1,6 +1,6 @@
 const express = require("express");
 const multer = require("multer");
-const {blogUpload, getAllBlogs, getBlog, updateBlog, deleteBlog} = require("../Controller/CRUDblogs");
+const {blogUpload, getAllBlogs, getBlog, updateBlog, deleteBlog} = require("../controllers/CRUDblogs");
 
 const router = express.Router();
 

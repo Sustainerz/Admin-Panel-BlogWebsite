@@ -1,0 +1,101 @@
+#Login{
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loginCard{
+    background-color: rgba(128, 128, 128, 0.192);
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.19);
+    width: 70%;
+    height: 80%;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.loginText{
+   
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.loginText h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.loginCard form{
+   
+    width: 90%;
+    margin: 10px auto;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.loginCard form input {
+    width: 70%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.check{
+  
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 5vh;
+}
+
+.check input{
+    position: relative;
+    left: -228px;
+    top: -5px;
+    height: 20px;
+}
+
+.check p{
+    position: relative;
+    /* left: -445px; */
+    left: 30px;
+    top: -24px;
+}
+
+.check a{
+    text-decoration: none;
+    color: rgb(119, 134, 249);
+}
+
+.loginCard form button{
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(26, 133, 255);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.loginCard form p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.loginCard form p a{
+    text-decoration: none;
+    color: rgb(26, 133, 255);
+}
