@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 // import Settings from '../screens/settings/Settings.jsx';
-import Routes from '../../Routes'
+import Rote from '../../Routes'
 
 const PrivateScreen = ({ history }) => {
   const [error, setError] = useState("");
@@ -47,7 +47,7 @@ const PrivateScreen = ({ history }) => {
   return error ? (
     <span className="error-message">{error}</span>
   ) : (
-    <div> <h1>{privateData} <Routes/>  </h1>
+    <div> <Rote/>  
       <button onClickCapture={logout}>logout user</button>
     </div>
   );

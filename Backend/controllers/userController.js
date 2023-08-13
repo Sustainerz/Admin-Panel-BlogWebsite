@@ -9,6 +9,7 @@ const bcrypt = require("bcryptjs");
 // Register a User
 
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
+    console.log("Hello");
     const { username, email, password } = req.body;
 
 
@@ -26,6 +27,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 // Login User
 
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
+    console.log("Hy");
     const { email, password } = req.body;
 
     // Checking if user doesnot exits in dataBase

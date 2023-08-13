@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import '../styles/postblog.css';
-// import { Editor } from 'react-draft-wysiwyg';
-// import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-// import { EditorState, convertToRaw } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { EditorState, convertToRaw } from 'draft-js';
 import Axios from 'axios';
 const BlogForm = () => {
   const [primaryImage, setPrimaryImage] = useState(null);
@@ -11,13 +11,13 @@ const BlogForm = () => {
 
   const primaryImageInputRef = useRef(null);
   const secondaryImageInputRef = useRef(null);
-  // const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [desc, setDesc] = useState('');
   const handleEditorChange = (state) => {
-    // const plainText = editorState.getCurrentContent().getPlainText('\u0001');
-    // console.log('Plain Text:', plainText);
-  //  setEditorState(state);
-    // setDesc(plainText);
+    const plainText = editorState.getCurrentContent().getPlainText('\u0001');
+    console.log('Plain Text:', plainText);
+   setEditorState(state);
+    setDesc(plainText);
   };
   const handlePrimaryImageChange = (event) => {
     const file = event.target.files[0];
@@ -65,10 +65,10 @@ const BlogForm = () => {
 
   const handleSubmit = async(event) => {
     event.preventDefault();
-    // const contentState = editorState.getCurrentContent();
-    // const contentRaw = convertToRaw(contentState);
+    const contentState = editorState.getCurrentContent();
+    const contentRaw = convertToRaw(contentState);
     
-    // console.log(contentRaw);
+    console.log(contentRaw);
     const formData = new FormData();
     formData.append("p_img", primaryImage);
     formData.append("sec_img", secondaryImage);
@@ -76,7 +76,7 @@ const BlogForm = () => {
     formData.append("description", desc);
 
     try {
-      await Axios.post("http://localhost:3002/api/upload", formData, {
+      await Axios.post("http://localhost:5000/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -91,7 +91,7 @@ const BlogForm = () => {
       primaryImage,
       secondaryImage,
       titleText,
-      // contentRaw, 
+      contentRaw, 
     });
   };
 
@@ -155,7 +155,7 @@ const BlogForm = () => {
           <label htmlFor="blogText">Blog Text:</label>
          
           <div className="blog-text-container">
-          {/* <Editor
+          <Editor
             editorState={editorState}
             onEditorStateChange={handleEditorChange}
             
@@ -163,7 +163,7 @@ const BlogForm = () => {
             toolbarClassName="toolbarClassName"
             wrapperClassName="wrapperClassName"
             editorClassName="editorClassName"
-          /> */}
+          />
           </div>
         
         <button type="submit" className="btn btn-primary">

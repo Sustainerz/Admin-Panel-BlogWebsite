@@ -1,25 +1,23 @@
 import React, { useState, useRef } from 'react';
 import '../styles/Update.css';
-// import { Editor } from 'react-draft-wysiwyg';
-import { useParams } from 'react-router-dom';
-// import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-// import { EditorState, convertToRaw } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { EditorState, convertToRaw } from 'draft-js';
 import Axios from 'axios';
 import { useBlogContext } from '../BlogProvider';
 const Update = () => {
   const [primaryImage, setPrimaryImage] = useState(null);
   const [titleText, setTitleText] = useState('');
   const { selectedBlogId } = useBlogContext();
-  const { slug } = useParams();
   const primaryImageInputRef = useRef(null);
   const id = selectedBlogId;
-  // const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [desc, setDesc] = useState('');
   const handleEditorChange = (state) => {
-    // const plainText = editorState.getCurrentContent().getPlainText('\u0001');
-    // console.log('Plain Text:', plainText);
-  //  setEditorState(state);
-    // setDesc(plainText);
+    const plainText = editorState.getCurrentContent().getPlainText('\u0001');
+    console.log('Plain Text:', plainText);
+   setEditorState(state);
+    setDesc(plainText);
   };
   
   const handlePrimaryImageChange = (event) => {
@@ -55,9 +53,9 @@ const Update = () => {
   
   const handleSubmit = async(event) => {
     event.preventDefault();
-    // const contentState = editorState.getCurrentContent();
-    // const contentRaw = convertToRaw(contentState);
-    // console.log(contentRaw);
+    const contentState = editorState.getCurrentContent();
+    const contentRaw = convertToRaw(contentState);
+    console.log(contentRaw);
     const formData = new FormData();
     formData.append("p_img", primaryImage);
     formData.append("category", selectedCategory);
@@ -65,7 +63,7 @@ const Update = () => {
     formData.append("description", desc);
 
     try {
-      await Axios.put(`http://localhost:3002/api/update/${id}`, formData, {
+      await Axios.put(`http://localhost:5000/api/update/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -137,7 +135,7 @@ const Update = () => {
           <label htmlFor="blogText">Updated Blog Text:</label>
          
           <div className="blog-text-container">
-          {/* <Editor
+          <Editor
             editorState={editorState}
             onEditorStateChange={handleEditorChange}
             
@@ -145,7 +143,7 @@ const Update = () => {
             toolbarClassName="toolbarClassName"
             wrapperClassName="wrapperClassName"
             editorClassName="editorClassName"
-          /> */}
+          />
           </div>
         
         <button type="submit" className="btn btn-primary">

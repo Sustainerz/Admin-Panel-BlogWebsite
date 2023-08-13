@@ -5,6 +5,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
+    float: right;
+    margin-top: -600px;
 }
 
 .scroll1 {

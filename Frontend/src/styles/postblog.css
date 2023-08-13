@@ -16,6 +16,8 @@
   position:relative;
   box-shadow: 0px 7px 20px rgb(0, 0, 0);
   padding: 20px;
+  float: right;
+  margin-top: -600px;
 }
 
 .blog-form-container .form-group {
